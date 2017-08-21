@@ -2,7 +2,7 @@
 Deploy locally
 =================
 
-$ cld app deploy hello-world --target local
+$ cld app deploy hello-world local
 
 
 ===============
