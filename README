@@ -1,1 +1,22 @@
 Sample applications for using with cloudark (https://github.com/cloud-ark/cloudark.git)
+
+Helpful commands
+----------------
+
+1) SSH into ECS cluster instance
+
+- Find out location of the .pem file for your cluster
+
+  - cld environment show <env-id>
+
+- cd into the directory where the .pem file is located
+
+- Change permissions
+
+  - chmod 400 <pem file>
+
+- Find out IP of the cluster instance from AWS web console
+
+- SSH into the cluster instance
+
+  - ssh -i "<pem file>" ec2-user@<AWS cluster instance IP>
