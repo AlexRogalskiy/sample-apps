@@ -1,7 +1,7 @@
 Sample applications for using with cloudark (https://github.com/cloud-ark/cloudark.git)
 
-Helpful commands
-----------------
+Comments
+---------
 
 1) SSH into ECS cluster instance
 
@@ -20,3 +20,9 @@ Helpful commands
 - SSH into the cluster instance
 
   - ssh -i "<pem file>" ec2-user@<AWS cluster instance IP>
+
+
+2) If you run into any issues, please file an issue (https://github.com/cloud-ark/cloudark/issues)
+
+   - Include your environment yaml file
+   - Include relevant log information from cld.log (this file is created in the cloudark directory)
