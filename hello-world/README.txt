@@ -2,7 +2,9 @@
 Deploy locally
 =================
 
-$ cld app deploy hello-world --deploylocal true
+$ cld environment create local-env environment-local.yaml
+
+$ cld app deploy hello-world <env-id>
 
 Enter application port as 8080 when prompted.
 
@@ -10,8 +12,8 @@ Enter application port as 8080 when prompted.
 Deploy on AWS
 ================
 
-$ cld environment create env-1 environment-ecs.yaml
+$ cld environment create env-aws environment-ecs.yaml
 
-$ cld app deploy hello-world --env-id <env-id>
+$ cld app deploy hello-world <env-id>
 
 Enter application port as 8080 when prompted.
