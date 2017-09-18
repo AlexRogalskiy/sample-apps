@@ -8,7 +8,7 @@ $ cld environment create env-1 environment-ecs.yaml
 
 $ cld app deploy ecs-php-demo <env-id>
 
-Enter application port as 80 when prompted.
+
 
 
 ========================================================================

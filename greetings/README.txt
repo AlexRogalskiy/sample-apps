@@ -2,11 +2,9 @@
 Deploy locally
 ================
 
-$ cld environment create env1 environment-local.yaml
+$ cld environment create env1 environment-rds-local.yaml
 
-$ cld app deploy greetings <env-id>
-
-Enter application port number as 5000 when prompted
+$ cld app deploy greetings <env-id> --port 5000
 
 
 ===============
@@ -15,7 +13,7 @@ Deploy on AWS
 
 $ cld environment create env-2 environment-rds-ecs.yaml
 
-$ cld app deploy greetings <env-id>
+$ cld app deploy greetings <env-id> --port 5000
 
-Enter application port number as 5000 when prompted
+
 
