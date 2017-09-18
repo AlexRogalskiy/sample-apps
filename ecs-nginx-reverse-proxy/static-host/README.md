@@ -1,8 +1,8 @@
+# AWS ECS sample application
+
 Application code taken from https://github.com/awslabs/ecs-nginx-reverse-proxy
 
-======================
-Deploy using CloudARK
-======================
+# Deploy using CloudARK
 
 $ cld environment create env-1 environment-ecs.yaml
 
@@ -10,10 +10,7 @@ $ cld app deploy ecs-php-demo <env-id>
 
 
 
-
-========================================================================
-Steps to deploy static-host example as outlined on awslabs github page
-========================================================================
+# Steps to deploy static-host example as outlined on awslabs github page
 
 
 ## NGINX Static Host Task Definition for ECS

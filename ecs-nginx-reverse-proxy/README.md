@@ -1,4 +1,11 @@
+# AWS ECS sample application
+
 Application code taken from https://github.com/awslabs/ecs-nginx-reverse-proxy
+
+CloudARK currently supports deployment for the static-host version.
+
+Check the static-host folder to see how this application can be deployed using CloudARK.
+
 
 # NGINX Reverse Proxy on Amazon EC2 Container Service
 
