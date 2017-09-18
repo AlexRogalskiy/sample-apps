@@ -6,7 +6,7 @@ Application code taken from https://github.com/awslabs/ecs-nginx-reverse-proxy
 
 $ cld environment create env-1 environment-ecs.yaml
 
-$ cld app deploy ecs-php-demo <env-id>
+$ cld app deploy nginx-proxy-demo <env-id>
 
 
 
