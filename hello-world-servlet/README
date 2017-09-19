@@ -43,7 +43,7 @@ Deploying on AWS ECS
 
 $ cld env create aws-servlet-env environment-ecs.yaml
 $ cld app deploy servlet-app <env-id> --port 8080
-$ curl <app_ip_url> or curl <app_url>
+$ curl <app_ip_url>/hello-world-servlet/ or curl <app_url>/hello-world-servlet/
 
 
 [1] <TODO: Put link to Docker github issue>
