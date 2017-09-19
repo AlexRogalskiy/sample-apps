@@ -1,7 +1,7 @@
 # Wordpress
 
-This repo/code is taken from the Docker official repository for wordpress. The README contents from
-the original repo are available under (About this Repo) section.
+This repo is derived from the Docker official repository for wordpress. The README contents from
+the original repo are available under 'About this Repo' section.
 
 We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Specifically,
 we have added environment yaml file to define cloud environment for Wordpress. And we have
@@ -21,7 +21,7 @@ $ cld app deploy wordpress env-id --memory 1000
 the application container to the RDS instance.
 
 Creating the environment may take approximately 10 minutes (more or less, depending upon
-spped of your Internet connection). The time is dominated by
+speed of your Internet connection). The time is dominated by
 the time taken to create the RDS instance. You will be able to deploy application on the environment
 only after it becomes 'available'. App deployment may take approximately 4/5 minutes.
 
