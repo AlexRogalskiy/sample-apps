@@ -14,6 +14,7 @@ c) environment-ecs-instance-type.yaml shows how to customize the
    t2.micro)
 d) environment-ecs-size-2.yaml shows how to customize the size
    of the ECS cluster (default cluster size is 1)
+e) environment-gke.yaml - for deployments on Google Container Engine (GKE)
 
 ==================
 Deploying locally
@@ -46,3 +47,14 @@ Deploying on AWS ECS
 $ cld env create env-aws environment-ecs.yaml
 $ cld app deploy hello-world <env-id> --port 8080
 $ curl <app_ip_url> / curl <app_url>
+
+==========================================
+Deploying on Google Container Engine (GKE)
+==========================================
+
+Add name of your Google cloud project and zone in environment-gke.yaml.
+Then follow these steps
+
+$ cld env create env-gke environment-gke.yaml
+$ cld app deploy hello-world <env-id> --port 8080
+$ curl <app_url>

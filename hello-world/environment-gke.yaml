@@ -1,0 +1,6 @@
+environment:
+  app_deployment:
+    target: gcloud
+    type: gke
+    project: <project-id>
+    zone: us-central1-b
