@@ -1,0 +1,12 @@
+environment:
+  resources:
+    gcloud:
+      - resource:
+          type: cloudsql
+          project: 'conf-registration-company-a'
+  app_deployment:
+    target: gcloud
+    type: gke
+    project: conf-registration-company-a
+    zone: us-central1-b
+
