@@ -1,6 +1,6 @@
 app:
   image: greetlocal:1510614146394
-  port: 5000
+  container_port: 5000
   env:
     PASSWORD: $CLOUDARK_MYSQL_Password
     DB: $CLOUDARK_MYSQL_DBName

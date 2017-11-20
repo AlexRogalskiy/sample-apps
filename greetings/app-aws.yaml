@@ -1,6 +1,6 @@
 app:
   image: 007068346857.dkr.ecr.us-west-2.amazonaws.com/greetaws2:1510517823079
-  port: 5000
+  container_port: 5000
   env:
     PASSWORD: $CLOUDARK_RDS_MasterUserPassword
     DB: $CLOUDARK_RDS_DBName
