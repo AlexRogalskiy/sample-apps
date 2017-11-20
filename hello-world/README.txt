@@ -32,7 +32,9 @@ cld container show command
 
 $ cld app deploy hello-world-1 env-local app.yaml
 
-$ curl http://localhost:<port>/
+$ cld app show hello-world-1
+
+$ curl <app-url>
 
 
 ===========================
