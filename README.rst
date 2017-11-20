@@ -4,15 +4,17 @@ CloudARK Sample Applications
 
 Sample applications for cloudark (https://github.com/cloud-ark/cloudark.git)
 
-Each application folder contains a yaml file defining the environment for that application.
-The README file in each application folder contains commands to deploy the application.
+The README file in each application folder contains instructions to deploy the application.
 
+
+AWS ECS Deployments
+--------------------
 As part of ECS cluster creation a ssh key is also created. You can use that to login
 to the ECS cluster instance as follows:
 
 - Find out location of the .pem file for your cluster
 
-  - cld environment show <env-id>
+  - cld environment show <env-name>
 
 - cd into the directory where the .pem file is located
 
@@ -25,6 +27,7 @@ to the ECS cluster instance as follows:
 - SSH into the cluster instance
 
   - ssh -i "<pem file>" ec2-user@<AWS cluster instance IP>
+
 
 Issues
 -------
