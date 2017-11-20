@@ -1,0 +1,3 @@
+app:
+  image: 007068346857.dkr.ecr.us-west-2.amazonaws.com/cont1:1510958319442
+  container_port: 8080
