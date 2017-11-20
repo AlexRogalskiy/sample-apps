@@ -2,7 +2,7 @@
 Deploy Locally
 ===============
 
-Deploy application locally and connect to RDS
+Deploy application locally binding to local MySQL container
 
 $ cld env create env-local environment-local.yaml
 
@@ -20,6 +20,8 @@ $ cld app deploy greetings-local env-local app-local.yaml
 Deploy on AWS ECS
 ==================
 
+Deploy application on ECS binding to a RDS instance
+
 $ cld env create env-aws environment-rds-ecs.yaml
 
 $ cld container create cont2 ecr
@@ -35,6 +37,8 @@ $ cld app deploy greetings-aws env-aws app-aws.yaml
 =====================
 Deploy on Google GKE
 =====================
+
+Deploy application on GKE binding to a CloudSQL instance
 
 Modify environment-cloudsql-gke.yaml with your project-id
 and preferred zone name. Then follow these steps:
