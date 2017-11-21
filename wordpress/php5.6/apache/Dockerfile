@@ -42,11 +42,5 @@ RUN set -ex; \
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
-ENV WORDPRESS_DB_HOST $CLOUDARK_RDS_Address
-ENV WORDPRESS_DB_USER $CLOUDARK_RDS_MasterUsername
-ENV WORDPRESS_DB_PASSWORD $CLOUDARK_RDS_MasterUserPassword
-ENV WORDPRESS_DB_NAME $CLOUDARK_RDS_DBName
-
-
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]

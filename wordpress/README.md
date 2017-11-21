@@ -12,31 +12,38 @@ the environment that will be created.
 
 $ cd php5.6/apache
 
-$ mv Dockerfile.gcloud Dockerfile
-
 Open environment-cloudsql-gke.yaml and set value for project attribute. It needs to be ID of gcloud project.
 You can create a project from Google Cloud Console: https://console.cloud.google.com
 
 $ cld env create staging environment-cloudsql-gke.yaml
 
-$ cld app deploy wordpress env-id --memory 1000
+$ cld container create cont1 gcr
+
+$ cld container show cont1
+
+Edit app-gke.yaml to include image url obtained from output of
+cld container show command
+
+$ cld app deploy wordpress staging app-gke.yaml
+
+$ cld app show wordpress
 
 
 # Deploy on ECS
 
 $ cd php5.6/apache
 
-$ mv Dockerfile.aws Dockerfile
-
 $ cld env create staging environment-rds-ecs.yaml
 
-$ cld app deploy wordpress env-id --memory 1000
+$ cld container create cont2 ecr
 
+$ cld container show cont2
 
-Creating the environment may take approximately 10 minutes (more or less, depending upon
-speed of your Internet connection). The time is dominated by
-the time taken to create the RDS instance. You will be able to deploy application on the environment
-only after it becomes 'available'. App deployment may take approximately 4/5 minutes.
+Edit app-ecs.yaml to include image url obtained from output of
+cld container show command
+
+$ cld app deploy wordpress staging app-ecs.yaml
+
 
 You can see all the resources created as part of environment creation and app deployment
 through Google Cloud console or AWS console.
