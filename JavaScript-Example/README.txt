@@ -18,6 +18,8 @@ Deploy Locally
 
 $ cld env create envlocal environment-local.yaml
 
+$ cld env show envlocal (wait till the status is 'available')
+
 $ cld container create container1 local
 
 $ cld container show container1
@@ -64,6 +66,8 @@ Deploying on AWS ECS
 
 $ cld env create envaws environment-ecs.yaml
 
+$ cld env show envaws (wait till the status is 'available')
+
 $ cld container create container2 ecr
 
 $ cld container show container2
@@ -98,6 +102,8 @@ Add name of your Google cloud project and zone in environment-gke.yaml.
 Then follow these steps
 
 $ cld env create envgke environment-gke.yaml
+
+$ cld env show envgke (wait till the status is 'available')
 
 $ cld container create container3 gcr
 
