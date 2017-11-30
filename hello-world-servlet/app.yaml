@@ -1,0 +1,3 @@
+app:
+  image: us.gcr.io/conf-registration-company-a/hellogcr1:1511889068762
+  container_port: 8080
