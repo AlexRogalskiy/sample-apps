@@ -9,6 +9,7 @@ RUN apt-get update -y \
 ADD . /src
 WORKDIR /src
 RUN mvn clean compile && mvn war:war \
-    && cp /src/target/hello-world-servlet.war /apache-tomcat-8.5.23/webapps/hello-world-servlet.war
+    && mv /apache-tomcat-8.5.23/webapps/ROOT /apache-tomcat-8.5.23/webapps/ROOT.bak \
+    && cp /src/target/ROOT.war /apache-tomcat-8.5.23/webapps/ROOT.war
 EXPOSE 8080
 CMD ["/apache-tomcat-8.5.23/bin/catalina.sh", "run"]
