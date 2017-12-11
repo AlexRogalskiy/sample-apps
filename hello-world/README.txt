@@ -1,10 +1,9 @@
 Hello World
 ------------
 
-This example shows how a web application written using Python Flask
-framework can be deployed using CloudARK.
+This example shows deployment of web application written using Python.
 
-The Dockerfile defines the application build steps.
+The Dockerfile defines application build steps.
 
 Several environment yaml files are available in the folder:
 a) environment-local.yaml should be used for local deployment
@@ -25,10 +24,9 @@ $ cld env create env-local environment-local.yaml
 
 $ cld container create cont1 local
 
-$ cld container show cont1
+Edit app.yaml to include image id obtained from output of command:
 
-Edit app.yaml to include image id obtained from output of
-cld container show command
+$ cld container show cont1
 
 $ cld app deploy hello-world-1 env-local app.yaml
 
@@ -41,17 +39,17 @@ $ curl <app-url>
 Deploying locally on Mac
 ===========================
 
-If you are using Mac OS, the application URL consisting of localhost:<port>
-may not respond because of a known issue in Docker for Mac [1].
-Note that CloudARK does not internally implement this workaround. As a result cld server
-will wait for your application to become responsive and will eventually timeout.
-
-You can get around this issue by using the IP address of the VM which is created
-by Docker for Mac. You can curl application url as shown below:
+In our testing On Mac (with Docker version 17.06.0-ce, build 02c1d87)
+we observed that CloudARK times out while pinging to check if application is up 
+even after application container has started successfully. So CloudARK will mark the deployment
+as failed. If such a situation happens, try using IP address of the VM which is created by Docker-for-Mac
+to access the application URL. For instance,
 
 curl http://192.168.99.100:<port>/
 
 You can find out IP of VM by executing following command: docker-machine ip default
+
+We have an open issue (https://github.com/cloud-ark/cloudark/issues/146) to address this bug.
 
 
 =====================
@@ -62,10 +60,9 @@ $ cld env create env-aws environment-ecs.yaml
 
 $ cld container create cont2 ecr
 
-$ cld container show cont2
+Edit app.yaml to include image uri (tagged_image attribute value) obtained from output of command:
 
-Edit app.yaml to include image url obtained from output of
-cld container show command
+$ cld container show cont2
 
 $ cld app deploy hello-world-2 env-aws app.yaml
 
@@ -78,20 +75,52 @@ $ curl <app_url>
 Deploying on Google GKE
 ========================
 
-Add name of your Google cloud project and zone in environment-gke.yaml.
-Then follow these steps
-
 $ cld env create env-gke environment-gke.yaml
 
-$ cld container create cont3 gcr
+$ cld container create cont3 gcr --project-id <ID of you GCloud project>
 
-$ cld containre show cont3
+Edit app.yaml to include image uri obtained from output of command:
 
-Edit app.yaml to include image url obtained from output of
-cld container show command
+$ cld container show cont3
 
 $ cld app deploy hello-world-3 env-gke app.yaml
 
 $ cld app show hello-world-3
 
 $ curl <app_url>
+
+
+
+Track / Debug:
+---------------
+
+$ cld env show <env-name>
+
+$ cld app show <app-name>
+
+$ cld app logs <app-name>
+
+$ cld env shell <env-name>
+
+
+Verify:
+-------
+
+$ cld app show <app-name>
+
+$ cld app list
+
+$ cld env show <env-name>
+
+$ cld env list
+
+
+Cleanup:
+--------
+
+$ cld app delete <app-name>
+
+$ cld env delete <env-name>
+
+$ cld container delete <container-name>
+
