@@ -7,6 +7,7 @@ can be deployed using CloudARK.
 There are two environment yaml files available in the folder:
 a) environment-local.yaml should be used for local deployment
 b) environment-ecs.yaml should be used for AWS ECS deployment
+b) environment-gke.yaml should be used for GKE deployment
 
 ==================
 Deploying locally
