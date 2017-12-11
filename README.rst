@@ -49,3 +49,10 @@ Please include following information:
 - relevant stack trace from cld.log
 
 
+Troubleshooting tips:
+----------------------
+Checkout our suggested troubleshooting tips here_
+
+.. _here: https://cloud-ark.github.io/cloudark/docs/html/html/troubleshooting.html
+
+
