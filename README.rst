@@ -51,8 +51,8 @@ Please include following information:
 
 Troubleshooting tips:
 ----------------------
-Checkout our suggested troubleshooting tips here_
+Checkout our suggested troubleshooting tips_.
 
-.. _here: https://cloud-ark.github.io/cloudark/docs/html/html/troubleshooting.html
+.. _tips: https://cloud-ark.github.io/cloudark/docs/html/html/troubleshooting.html
 
 
