@@ -1,3 +1,3 @@
 app:
-  image: us.gcr.io/conf-registration-company-a/gkecont1:1512004130604
+  image: us.gcr.io/conf-registration-company-a/contgke:1512015763918
   container_port: 8080

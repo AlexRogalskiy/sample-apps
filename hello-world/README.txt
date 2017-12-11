@@ -49,6 +49,10 @@ curl http://192.168.99.100:<port>/
 
 You can find out IP of VM by executing following command: docker-machine ip default
 
+You can find the port from the 'url' attribute that is available from output of command:
+
+$ cld app show <app-name>
+
 We have an open issue (https://github.com/cloud-ark/cloudark/issues/146) to address this bug.
 
 

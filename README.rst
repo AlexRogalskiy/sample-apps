@@ -2,31 +2,34 @@
 CloudARK Sample Applications
 =============================
 
-Sample applications for cloudark (https://github.com/cloud-ark/cloudark.git)
+Following sample applications are currently available for CloudARK (https://github.com/cloud-ark/cloudark.git)
 
-The README file in each application folder contains instructions to deploy the application.
+1) hello-world
+   - Single container Python web application
+
+2) hello-world-servlet
+   - Single container Java Servlets web application
+
+3) JavaScript-Example
+   - Single container Java web application that uses HTML+JavaScript frontend and Java REST API
+
+4) php-app
+   - Single container PHP web application
+
+5) nginx-static-host
+   - Single container nginx proxy server that serves static files
+
+6) greetings
+   - Single container stateful application that uses cloud managed database service instance to store state
+
+7) wordpress
+   - Single container stateful application that uses cloud managed database service instance to store state
+
+8) wordpress-kubenernetes-pods
+   - Multi-container stateful application that uses mysql container to manage state
 
 
-AWS ECS Deployments
---------------------
-As part of ECS cluster creation a ssh key is also created. You can use that to login
-to the ECS cluster instance as follows:
-
-- Find out location of the .pem file for your cluster
-
-  - cld environment show <env-name>
-
-- cd into the directory where the .pem file is located
-
-- Change permissions of the .pem file
-
-  - chmod 400 <pem file>
-
-- Find out IP of the cluster instance from AWS web console
-
-- SSH into the cluster instance
-
-  - ssh -i "<pem file>" ec2-user@<AWS cluster instance IP>
+The README file in each application folder contains instructions to deploy that application.
 
 
 Issues
@@ -35,8 +38,14 @@ If you run into any issues please file them here_
 
 .. _here: https://github.com/cloud-ark/cloudark/issues
 
-Please include following:
+Please include following information:
 
-- Environment yaml file
+- environment yaml definition
 
-- Relevant logs from cld.log (this file is created in the folder where you have installed cloudark)
+- application yaml definition
+
+- cld commands used
+
+- relevant stack trace from cld.log
+
+
