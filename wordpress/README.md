@@ -3,52 +3,9 @@
 This repo is derived from the Docker official repository for wordpress. The README contents from
 the original repo are available under 'About this Repo' section.
 
-We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Specifically,
-we have added environment yaml file to define cloud environment for Wordpress. And we have
-updated the original Dockerfile to set database related environment variables based on
-the environment that will be created.
+We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Check the README.txt
+in that folder for instructions on deploying Wordpress using CloudARK.
 
-# Deploy on GKE
-
-$ cd php5.6/apache
-
-Open environment-cloudsql-gke.yaml and set value for project attribute. It needs to be ID of gcloud project.
-You can create a project from Google Cloud Console: https://console.cloud.google.com
-
-$ cld env create staging environment-cloudsql-gke.yaml
-
-$ cld container create cont1 gcr
-
-$ cld container show cont1
-
-Edit app-gke.yaml to include image url obtained from output of
-cld container show command
-
-$ cld app deploy wordpress staging app-gke.yaml
-
-$ cld app show wordpress
-
-
-# Deploy on ECS
-
-$ cd php5.6/apache
-
-$ cld env create staging environment-rds-ecs.yaml
-
-$ cld container create cont2 ecr
-
-$ cld container show cont2
-
-Edit app-ecs.yaml to include image url obtained from output of
-cld container show command
-
-$ cld app deploy wordpress staging app-ecs.yaml
-
-
-You can see all the resources created as part of environment creation and app deployment
-through Google Cloud console or AWS console.
-
-Screenshots of wordpress deployment available in the README at: https://github.com/cloud-ark/cloudark
 
 
 
