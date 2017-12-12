@@ -1,5 +1,5 @@
 app:
-  image: us.gcr.io/conf-registration-company-a/greetgke:1510525682594
+  image: us.gcr.io/cloudark-test-gke/cont1:1513119994006
   container_port: 80
   env:
     WORDPRESS_DB_PASSWORD: $CLOUDARK_CLOUDSQL_Password
