@@ -1,5 +1,0 @@
-environment:
-  app_deployment:
-    target: gcloud
-    type: gke
-

@@ -1,6 +1,0 @@
-environment:
-  app_deployment:
-    target: aws
-    type: ecs
- 
-
