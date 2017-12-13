@@ -22,10 +22,6 @@ Following sample applications are currently available for CloudARK (https://gith
 6) wordpress-kubenernetes-pods
    - Multi-container stateful application that uses mysql container to manage state
 
-7) nginx-static-host
-   - Single container nginx proxy server that serves static files
-
-
 
 The README file in each application folder contains instructions to deploy that application.
 
