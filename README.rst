@@ -13,20 +13,18 @@ Following sample applications are currently available for CloudARK (https://gith
 3) JavaScript-Example
    - Single container Java web application that uses HTML+JavaScript frontend and Java REST API
 
-4) php-app
-   - Single container PHP web application
+4) greetings
+   - Single container stateful application that uses cloud managed database service instance to store state
 
-5) nginx-static-host
+5) wordpress
+   - Single container stateful application that uses cloud managed database service instance to store state
+
+6) wordpress-kubenernetes-pods
+   - Multi-container stateful application that uses mysql container to manage state
+
+7) nginx-static-host
    - Single container nginx proxy server that serves static files
 
-6) greetings
-   - Single container stateful application that uses cloud managed database service instance to store state
-
-7) wordpress
-   - Single container stateful application that uses cloud managed database service instance to store state
-
-8) wordpress-kubenernetes-pods
-   - Multi-container stateful application that uses mysql container to manage state
 
 
 The README file in each application folder contains instructions to deploy that application.
