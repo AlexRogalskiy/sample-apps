@@ -1,13 +1,11 @@
 # Wordpress
 
-This repo is derived from the Docker official repository for wordpress. The README contents from
-the original repo are available under 'About this Repo' section.
+# Installation instructions using CloudARK
 
+------
 We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Check the README.txt
 in that folder for instructions on deploying Wordpress using CloudARK.
-
-
-
+------
 
 # About this Repo
 
