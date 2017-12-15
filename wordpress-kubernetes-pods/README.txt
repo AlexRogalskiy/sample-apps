@@ -2,8 +2,7 @@
 Deploy on GKE
 ==============
 
-wp-pod.yaml: Application definition consisting of Pods defined for wordpress and mysql containers using publicly available images.
-             This file is taken from the README file of [1].
+wp-pod.yaml: Application definition consisting of Pods defined for wordpress and mysql containers using publicly available images. This file is taken from the README file of [1].
 
 environment-gke.yaml: Environment definition consisting of GKE cluster definition
 
