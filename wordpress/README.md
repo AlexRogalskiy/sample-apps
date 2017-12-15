@@ -1,11 +1,7 @@
-# Wordpress
-
 # Installation instructions using CloudARK
 
-------
-We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Check the README.txt
-in that folder for instructions on deploying Wordpress using CloudARK.
-------
+We have updated the php5.6/apache folder for deploying Wordpress with CloudARK. Check the README.txt for the steps.
+
 
 # About this Repo
 
